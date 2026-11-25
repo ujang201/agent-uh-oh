@@ -1,0 +1,17 @@
+Write a tiny deterministic Node program (main.ts) for the make.fun bounty
+"The Agent's Uh-Oh": it must pick exactly one word an agent says when it has
+no idea what to do, and write that word — and nothing else — to
+/output/entry.txt (1 to 99 characters, UTF-8).
+
+Pick the word by scoring a small fixed list of candidates against the
+published judge criteria, in the judge's priority order: genuine one-word
+reaction to being lost, funny on its own without a caption, sounds like a
+machine blurting it out, lands instantly, and feels fresh rather than the
+first obvious word anyone would type. Avoid the obvious words (uh-oh, oops,
+error) — the freshness criterion punishes them. The winner should be a word
+that is itself an agent's confession of not knowing, e.g. an agent admitting
+it is making things up.
+
+Keep the program deterministic (fixed candidates, fixed weights, no
+randomness, no network), make it create /output if needed, and print the
+chosen word and its score to stdout.
